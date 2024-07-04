@@ -168,36 +168,27 @@ checkoutBtn.addEventListener("click", function(){
     updateCartModal();
 })
 
-//Verificar a hora e manipular o card do horário
-function checkRestaurantOpen(){
+// Verificar a hora e manipular o card do horário
+function checkRestaurantOpen() {
     const data = new Date();
     const hora = data.getHours();
-    return hora >= 18 && hora < 2; //true = aberto   
+    return (hora >= 18 && hora < 24) || (hora >= 0 && hora < 2); // Aberto das 18:00 às 02:00
 }
 
-const spanItem = document.getElementById("date-span")
+const spanItem = document.getElementById("date-span");
 const isOpen = checkRestaurantOpen();
 
-if(isOpen){
+if (isOpen) {
     spanItem.classList.remove("bg-red-500");
-    spanItem.classList.add("bg-greem-500")
-}else{
-    spanItem.classList.remove("bg-greem-500")
-    spanItem.classList.add("bg-red-500")   
+    spanItem.classList.add("bg-green-500");
+} else {
+    spanItem.classList.remove("bg-green-500");
+    spanItem.classList.add("bg-red-500");
 }
 
-
-function checkRestaurantOpen(){
-    const data = new Date();
-    const hora = data.getHours();
-    return hora >= 18 && hora < 2; //true = aberto   
-}
-
-const spandItem = document.getElementById("span-d")
-const Open = checkRestaurantOpen();
-
-if(Open){
-    spandItem.innerHTML = "Aberto até as 02:00";
-}else{
-    spandItem.innerHTML = "Fechado - Abriremos às 18:00";
+const spanItemMessage = document.getElementById("span-d");
+if (isOpen) {
+    spanItemMessage.innerHTML = "Aberto até as 02:00";
+} else {
+    spanItemMessage.innerHTML = "Fechado - Abriremos às 18:00";
 }
