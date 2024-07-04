@@ -79,7 +79,7 @@ function updateCartModal(){
             <div class="flex items-center justify-between"> 
                 <div> 
                  <p class="font-medium">${item.name}</p>
-                 <p>Qtd ${item.quantity}</p>
+                 <p>Qtd: ${item.quantity}</p>
                  <p class= "font-medium mt-2">R$ ${item.price.toFixed(2)}</p>
                 </div>
 
