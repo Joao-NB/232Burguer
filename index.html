@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./styles/output.css">
+
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+
+    <title>212 Burguer</title>
+</head>
+<body>
+    <!--HEADER-->
+     <header class="w-full h-[420px] bg-zinc-900 bg-home bg-cover bg-center">
+        <div class="w-full h-full flex flex-col justify-center items-center">
+            <img 
+            src="assets/232.webp" 
+            alt="Logo 232 Burguer"
+            class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200"
+            />
+            <h1 class="text-4xl mt-4 mb-2 font-bold text-white">
+                232 Burguer
+            </h1>
+
+            <span class="text-white font-medium">Rua 7 de Setembro, 109 - Carmo, Olinda, PE 53020-130</span>
+
+            <div class="bg-green-500 px-4 py-1 rounded-lg mt-5" id="date-span">
+                <span class="text-white font-medium">Seg á Dom - 18:00 as 02:00</span>
+            </div>
+
+        </div>
+     </header>
+    <!--FIM DO HEADER-->
+
+     <h2 class="text-2xl text-gray-900 md:text-3xl font-bold text-center mt-9 mb-9">
+        Conheça nosso menu
+     </h2>
+
+     <!--INÍCIO MENU-->
+    <div id="menu">
+
+        <main class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
+
+            <!--PRODUTO ITEM-->
+            <div class="flex gap-2">
+                <img src="assets/amostrado.webp" 
+                alt="Hamburguer Amostrado"
+                class="w-82 h-82 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                >
+
+                <div>
+                    <p class="font-bold text-blue-600">Amostrado</p>
+                    <p class="text-sm">Molho Cheddar Especial, Bacon, Cebola Amanteigada e 2 Burgueres Artesanais de 150g cada.
+                    </p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 45,00</p>
+                        <button 
+                        class="bg-blue-700 px-5 rounded add-to-card-btn"
+                        data-name="Amostrado"
+                        data-price="45,00"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+            <!--FIM PRODUTO ITEM-->
+
+            <!--PRODUTO ITEM-->
+            <div class="flex gap-2">
+                <img src="assets/abestalhado.webp" 
+                alt="Hamburguer abestalhado"
+                class="w-82 h-82 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                >
+
+                <div>
+                    <p class="font-bold text-blue-600">Abestalhado</p>
+                    <p class="text-sm">Filé de Sobrecoxa Temperado e Empanado, Creme Cheese Saborizado, Alface, Cebola Roxa e Molho Mostarda e Mel.
+                    </p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 26,00</p>
+                        <button 
+                        class="bg-blue-700 px-5 rounded add-to-card-btn"
+                        data-name="Abestalhado"
+                        data-price="26,00"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+            <!--FIM PRODUTO ITEM-->
+            
+            <!--PRODUTO ITEM-->
+            <div class="flex gap-2">
+                <img src="assets/cabuloso.webp" 
+                alt="Hamburguer Frescurento"
+                class="w-82 h-82 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                >
+
+                <div>
+                    <p class="font-bold text-blue-600">Cabuloso</p>
+                    <p class="text-sm">Burguer com Anéis de Cebola Empanados, Molho Barbecue, Queijo Cheddar, Maionese Especial e Carne Artesanal 150g.
+                    </p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        
+                        <p class="font-bold text-lg">R$ 28,00</p>
+                        
+                        <button 
+                        class="bg-blue-700 px-5 rounded add-to-card-btn"
+                        data-name="Cabuloso"
+                        data-price="28,00"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+            <!--FIM PRODUTO ITEM-->
+
+            <!--PRODUTO ITEM-->
+            <div class="flex gap-2">
+                <img src="assets/queijudo.webp" 
+                alt="Hamburguer Queijudo"
+                class="w-82 h-82 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                >
+
+                <div>
+                    <p class="font-bold text-blue-600">Queijudo</p>
+                    <p class="text-sm">Queijo Mussarela Empanado, Burguer Artesanal 150g com Queijo Cheddar, Ketchup de Goiabada Artesanal e Maioenese!
+                    </p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        
+                        <p class="font-bold text-lg">R$ 35,00</p>
+                        
+                        <button 
+                        class="bg-blue-700 px-5 rounded add-to-card-btn"
+                        data-name="Queijudo"
+                        data-price="35,00"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+            <!--FIM PRODUTO ITEM-->
+
+            <!--PRODUTO ITEM-->
+            <div class="flex gap-2">
+                <img src="assets/rochedo.webp" 
+                alt="Hamburguer Rochedo"
+                class="w-82 h-82 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                >
+
+                <div>
+                    <p class="font-bold text-blue-600">Rochedo</p>
+                    <p class="text-sm">Bacon, Picles, Salada (Alface, Tomate e Cebola Roxa), Burguer Artesanal 150g com Queijo Cheddar e Molho Rochedo (levemente picante)
+                    </p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        
+                        <p class="font-bold text-lg">R$ 32,00</p>
+                        
+                        <button 
+                        class="bg-blue-700 px-5 rounded add-to-card-btn"
+                        data-name="Rochedo"
+                        data-price="32,00"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+            <!--FIM PRODUTO ITEM-->
+
+            <!--PRODUTO ITEM-->
+            <div class="flex gap-2">
+                <img src="assets/criadocomvo.webp" 
+                alt="Hamburguer Criado com Vó"
+                class="w-82 h-82 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                >
+
+                <div>
+                    <p class="font-bold text-blue-600">Criado com Vó</p>
+                    <p class="text-sm">Burguer com Molho Gorgonzola, Bacon, Cebola no Melaço e Carne Artesanal 150g.
+                    </p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        
+                        <p class="font-bold text-lg">R$ 29,00</p>
+                        
+                        <button 
+                        class="bg-blue-700 px-5 rounded add-to-card-btn"
+                        data-name="Criado com Vó"
+                        data-price="29,00"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+            <!--FIM PRODUTO ITEM-->
+
+             <!--PRODUTO ITEM-->
+             <div class="flex gap-2">
+                <img src="assets/xexeiro.webp" 
+                alt="Xexeiro"
+                class="w-82 h-82 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                >
+
+                <div>
+                    <p class="font-bold text-blue-600">Xexeiro</p>
+                    <p class="text-sm">Burguer com Molho Gorgonzola, Bacon, Cebola no Melaço e Carne Artesanal 150g.
+                    </p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        
+                        <p class="font-bold text-lg">R$ 20,00</p>
+                        
+                        <button 
+                        class="bg-blue-700 px-5 rounded add-to-card-btn"
+                        data-name="Xexeiro"
+                        data-price="20,00"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+            <!--FIM PRODUTO ITEM-->
+
+              <!--PRODUTO ITEM-->
+              <div class="flex gap-2">
+                <img src="assets/viradonomoidecoentro.webp" 
+                alt="Virado no Mói de Coentro"
+                class="w-82 h-82 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                >
+
+                <div>
+                    <p class="font-bold text-blue-600">Virado no Mói de Coentro</p>
+                    <p class="text-sm">Burguer Vegetariano (futuro Burguer), Queijo Cheddar, Alface, Tomate, Cebola Roxa e Maionese Especial.
+                    </p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        
+                        <p class="font-bold text-lg">R$ 26,00</p>
+                        
+                        <button 
+                        class="bg-blue-700 px-5 rounded add-to-card-btn"
+                        data-name="Virado no Mói de Coentro"
+                        data-price="26,00"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+            <!--FIM PRODUTO ITEM-->
+
+            <!--PRODUTO ITEM-->
+            <div class="flex gap-2">
+                <img src="assets/matuto.webp" 
+                alt="Tabacudo"
+                class="w-82 h-82 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                >
+
+                <div>
+                    <p class="font-bold text-blue-600">Matuto</p>
+                    <p class="text-sm">Burguer artesanal de Carne de Sol, Queijo Coalho Chapeado, Cebola Caramelizada no Mel de Engenho e Maionese Especial.
+                    </p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        
+                        <p class="font-bold text-lg">R$ 28,00</p>
+                        
+                        <button 
+                        class="bg-blue-700 px-5 rounded add-to-card-btn"
+                        data-name="Matuto"
+                        data-price="28,00"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+            <!--FIM PRODUTO ITEM-->
+
+            <!--PRODUTO ITEM-->
+            <div class="flex gap-2">
+                <img src="assets/tabacudo.webp" 
+                alt="Tabacudo"
+                class="w-82 h-82 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                >
+
+                <div>
+                    <p class="font-bold text-blue-600">Tabuco</p>
+                    <p class="text-sm">Burguer com Molho Cheddar da Casa e Maionese Especial, Bacon e Carne Artesanal 120g.
+                    </p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        
+                        <p class="font-bold text-lg">R$ 28,00</p>
+                        
+                        <button 
+                        class="bg-blue-700 px-5 rounded add-to-card-btn"
+                        data-name="Tabacudo"
+                        data-price="28,00"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+            <!--FIM PRODUTO ITEM-->
+
+        </main>
+
+        <div class="mx-auto max-w-7xl px-2 my-2">
+            <h2 class="text-2xl text-gray-900 md:text-3xl font-bold mt-9 mb-9">
+                Acompanhamentos
+            </h2>
+        </div>
+
+        <!--GRID ACOMPANHAMENTOS-->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16" id="menu">
+
+            <!--PRODUTO ITEM-->
+            <div class="flex gap-2">
+                <img src="assets/frangolambuzado.webp" 
+                alt="Frango Lambuzado"
+                class="w-82 h-82 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                >
+
+                <div>
+                    <p class="font-bold text-blue-600">Frango Lambuzado</p>
+                    <p class="text-sm">Frango ( pedacinhos de sobrecoxa empanados) lambuzado no molho docemente apimentado, com maionese e raspas de limão!
+                    </p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        
+                        <p class="font-bold text-lg">R$ 27,00</p>
+                        
+                        <button 
+                        class="bg-blue-700 px-5 rounded add-to-card-btn"
+                        data-name="Frango Lambuzado"
+                        data-price="27,00"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+            <!--FIM PRODUTO ITEM-->
+
+            <!--PRODUTO ITEM-->
+            <div class="flex gap-2">
+                <img src="assets/breguecinhodecostela.webp" 
+                alt="Breguecinho de Costela"
+                class="w-82 h-82 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                >
+
+                <div>
+                    <p class="font-bold text-blue-600">Breguecinho de Costela</p>
+                    <p class="text-sm">Coxinhas de Costela Bovina, sem massa, com muito recheio e muito sabororoso!!
+                    </p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        
+                        <p class="font-bold text-lg">R$ 31,00</p>
+                        
+                        <button 
+                        class="bg-blue-700 px-5 rounded add-to-card-btn"
+                        data-name="Breguecinho de Costela"
+                        data-price="31,00"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+            <!--FIM PRODUTO ITEM-->
+
+            <!--PRODUTO ITEM-->
+            <div class="flex gap-2">
+                <img src="assets/batatafrita.webp" 
+                alt="Batata Frita"
+                class="w-82 h-82 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                >
+
+                <div>
+                    <p class="font-bold text-blue-600">Batata Frita</p>
+                    <p class="text-sm">Batata Frita fininha e crocante mais deliciosas de todo nordeste, todo o Brasil e todo o MUNDO!
+                    </p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        
+                        <p class="font-bold text-lg">R$ 28,00</p>
+                        
+                        <button 
+                        class="bg-blue-700 px-5 rounded add-to-card-btn"
+                        data-name="Tabacudo"
+                        data-price="28,00"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+            <!--FIM PRODUTO ITEM-->
+
+            <!--PRODUTO ITEM-->
+            <div class="flex gap-2">
+                <img src="assets/batataarretada.webp" 
+                alt="Batata Arretada"
+                class="w-82 h-82 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                >
+
+                <div>
+                    <p class="font-bold text-blue-600">Batata Arretada</p>
+                    <p class="text-sm">Batata Frita com Molho Cheddar Especial e Bacon com o sabor da melhor do Nordeste!
+                    </p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        
+                        <p class="font-bold text-lg">R$ 18,00</p>
+                        
+                        <button 
+                        class="bg-blue-700 px-5 rounded add-to-card-btn"
+                        data-name="Batata Arretada"
+                        data-price="18,00"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+            <!--FIM PRODUTO ITEM-->
+
+        </div>
+        <!--FIM GRID ACOMPANHAMENTOS-->
+
+        <div class="mx-auto max-w-7xl px-2 my-2">
+            <h2 class="text-2xl text-gray-900 md:text-3xl font-bold mt-9 mb-9">
+                Bebidas
+            </h2>
+        </div>
+
+        <!--GRID BEBIDAS-->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16" id="menu">
+
+            <!--PRODUTO ITEM-->
+            <div class="flex gap-2 w-full">
+                <img src="assets/coca.png" 
+                alt="Coca-Cola 350ml"
+                class="w-82 h-82 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                >
+
+                <div class="w-full">
+                    <p class="font-bold text-blue-600">Coca-Cola 350ml</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        
+                        <p class="font-bold text-lg">R$ 6,00</p>
+                        
+                        <button 
+                        class="bg-blue-700 px-5 rounded add-to-card-btn"
+                        data-name="Frango Lambuzado"
+                        data-price="27,00"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+            <!--FIM PRODUTO ITEM-->
+
+            <!--PRODUTO ITEM-->
+            <div class="flex gap-2 w-full">
+                <img src="assets/guarana.png" 
+                alt="Guaraná Antártica"
+                class="w-82 h-82 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                >
+
+                <div class="w-full">
+                    <p class="font-bold text-blue-600">Guaraná Antártica 350ml</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        
+                        <p class="font-bold text-lg">R$ 6,00</p>
+                        
+                        <button 
+                        class="bg-blue-700 px-5 rounded add-to-card-btn"
+                        data-name="Guaraná Antártica"
+                        data-price="6,00"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+            <!--FIM PRODUTO ITEM-->
+
+    </div>
+    <!--FIM MENU-->
+
+    <!--MODAL CART-->
+    <div class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden">
+
+        <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
+            <h2 class="text-center font-bold text-2xl mb-2 text-blue-600">Meu Carrinho</h2>
+
+        <div id="cart-items" class="felx justify-between mb-2 flex-col"></div>
+
+        <p class="font-bold">Total: <span id="cart-total">0,00</span></p>
+
+        <p class="font-bold mt-4">Endereço de entrega
+            <input type="text"
+            placeholder="Digite seu endereço completo..."
+            id="adress"
+            class="w-full boder-2 p-1 rounded my-1"
+            />
+        </p>
+        <p class="text-red-500 hidden" id="adrs-warn">Digite seu endereço completo</p>
+
+        <div class="flex items-center justify-between mt-4 w-full">
+            <button id="close-moral-btn">Fechar</button>
+            <button id="checkout-btn" class="bg-green-500 text-white px-4 py-1 rounded">Finalizar pedido</button>
+        </div>
+
+        </div>
+    </div>
+    <!--FIM MODAL CART-->
+
+    <!--BUTTON CARD FOOTER-->
+    <footer class="w-full bg-blue-700 py-3 fixed bottom-0 z-40 flex items-center justify-center">
+
+        <button 
+            class="flex items-center justify-center gap-2 text-white font-bold"
+            id="cart-btn"
+            >
+
+            (<span id="card-count">0</span>)
+            Veja meu carrinho
+            <i class="fa fa-cart-plus texxt-lg text-white"></i>
+
+        </button>
+
+    </footer>
+    <!--FIM BUTTON CARD FOOTER-->
+     
+</body>
+</html>
