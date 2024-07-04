@@ -199,5 +199,5 @@ const Open = checkRestaurantOpen();
 if(Open){
     spandItem.innerHTML = "Aberto até as 02:00";
 }else{
-    spandItem.innerHTML = "Fechado. Abriremos às 18:00";
+    spandItem.innerHTML = "Fechado - Abriremos às 18:00";
 }
