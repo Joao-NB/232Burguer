@@ -83,9 +83,9 @@ function updateCartModal(){
                  <p class= "font-medium mt-2">R$ ${item.price.toFixed(2)}</p>
                 </div>
 
-                <buttom> 
+                <button class="remove-from-cart-btn" data-name="${item.name}"> 
                     Remover
-                </buttom>
+                </button    >
     
             </div>
         `
@@ -103,4 +103,68 @@ function updateCartModal(){
 
     cartCounter.innerHTML = cart.length;
 
+}
+
+//Função para remover items do carrinho 
+
+cartItemsContainer.addEventListener("click", function (event){
+    if(event.target.classList.contains("remove-from-cart-btn")){
+        const name = event.target.getAttribute("data-name")
+
+        removeItemCart(name);
+    }
+})
+
+function removeItemCart(name){
+    const index = cart.findIndex(item => item.name === name);
+
+    if(index !== -1){
+        const item = cart[index];
+
+        if(item.quantity > 1){
+            item.quantity -= 1;
+            updateCartModal();
+            return;
+        }
+
+        cart.splice(index, 1);
+        updateCartModal();
+    }
+}
+
+
+addressInput.addEventListener("input", function(event){
+    let inputValue = event.target.value;
+
+    if(inputValue !== ""){
+        addressInput.classList.remove("border-red-500")
+        addressWarn.classList.add("hidden")
+    }
+})
+
+checkoutBtn.addEventListener("click", function(){
+    if(cart.length === 0) return;
+    if(addressInput.value === ""){
+        addressWarn.classList.remove("hidden")
+        addressInput.classList.add("border-red-500")
+        return;
+    }
+})
+
+//Verificar a hora e manipular o card do horário
+function checkRestaurantOpen(){
+    const data = new Date();
+    const hora = data.h=getHours();
+    return hora >= 18 && hora < 2; //true = aberto   
+}
+
+const spanItem = document.getElementeV=ById("data-span")
+const isOpen = checkRestaurantOpen();
+
+if(isOpen){
+    spanItem.classList.remove("bg-red-500");
+    spanItem.classList.add("bg-greem-500")
+}else{
+    spanItem.classList.remove("bg-greem-500")
+    spanItem.classList.add("bg-red-500");   
 }
