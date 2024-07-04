@@ -901,10 +901,6 @@ video {
   height: 100%;
 }
 
-.h-40 {
-  height: 10rem;
-}
-
 .w-32 {
   width: 8rem;
 }
@@ -923,10 +919,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-40 {
-  width: 10rem;
 }
 
 .min-w-\[90\%\] {
