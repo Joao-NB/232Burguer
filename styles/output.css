@@ -2109,21 +2109,6 @@ video {
   padding-bottom: 0.75rem;
 }
 
-.px-9 {
-  padding-left: 2.25rem;
-  padding-right: 2.25rem;
-}
-
-.px-10 {
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
-}
-
-.px-8 {
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
 .text-left {
   text-align: left;
 }
@@ -2780,6 +2765,10 @@ body{
 
   .md\:gap-10 {
     gap: 2.5rem;
+  }
+
+  .md\:bg-homemd {
+    background-image: url('/assets/pitombeira-dark-md.png');
   }
 
   .md\:px-4 {
