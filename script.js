@@ -142,6 +142,8 @@ addressInput.addEventListener("input", function(event){
     }
 })
 
+
+// Finalizar pedido
 checkoutBtn.addEventListener("click", function(){
     if(cart.length === 0) return;
     if(addressInput.value === ""){
@@ -149,16 +151,31 @@ checkoutBtn.addEventListener("click", function(){
         addressInput.classList.add("border-red-500")
         return;
     }
+
+//Enviar pedido para api whats
+    const cartItems =cart.map((item) =>{
+        return(
+            ` ${item.name} Quantidade: (${item.quantity}) Preço: R$(item.price) |`
+        )
+    }).join("")
+
+    const message = encodeURIComponent(cartItems) 
+    const phone = "81999085154"
+
+    window.open(`https://wa.me/${phone}?text=${message} Endereço: ${addressInput.value}`, "_blank")
+
+    cart = [];
+    updateCartModal();
 })
 
 //Verificar a hora e manipular o card do horário
 function checkRestaurantOpen(){
     const data = new Date();
-    const hora = data.h=getHours();
+    const hora = data.getHours();
     return hora >= 18 && hora < 2; //true = aberto   
 }
 
-const spanItem = document.getElementeV=ById("data-span")
+const spanItem = document.getElementById("date-span")
 const isOpen = checkRestaurantOpen();
 
 if(isOpen){
@@ -166,5 +183,5 @@ if(isOpen){
     spanItem.classList.add("bg-greem-500")
 }else{
     spanItem.classList.remove("bg-greem-500")
-    spanItem.classList.add("bg-red-500");   
+    spanItem.classList.add("bg-red-500")   
 }
