@@ -2747,10 +2747,6 @@ body{
 }
 
 @media (min-width: 768px) {
-  .md\:mb-16 {
-    margin-bottom: 4rem;
-  }
-
   .md\:min-w-\[600px\] {
     min-width: 600px;
   }
@@ -2761,11 +2757,6 @@ body{
 
   .md\:gap-10 {
     gap: 2.5rem;
-  }
-
-  .md\:px-10 {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
   }
 
   .md\:px-4 {

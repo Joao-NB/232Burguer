@@ -185,3 +185,19 @@ if(isOpen){
     spanItem.classList.remove("bg-greem-500")
     spanItem.classList.add("bg-red-500")   
 }
+
+
+function checkRestaurantOpen(){
+    const data = new Date();
+    const hora = data.getHours();
+    return hora >= 18 && hora < 2; //true = aberto   
+}
+
+const spandItem = document.getElementById("span-d")
+const Open = checkRestaurantOpen();
+
+if(Open){
+    spandItem.innerHTML = "Aberto até as 02:00";
+}else{
+    spandItem.innerHTML = "Fechado. Abriremos às 18:00";
+}
