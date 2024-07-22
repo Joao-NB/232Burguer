@@ -1955,7 +1955,7 @@ video {
 }
 
 .bg-home {
-  background-image: url('/assets/pitombeira-dark.png');
+  background-image: url('/');
 }
 
 .decoration-slice {
@@ -2768,7 +2768,7 @@ body{
   }
 
   .md\:bg-homemd {
-    background-image: url('/assets/pitombeira-dark-md.png');
+    background-image: url('/assets/232.png');
   }
 
   .md\:px-4 {

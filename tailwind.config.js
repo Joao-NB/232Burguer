@@ -4,8 +4,8 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage:{
-        "home": "url('/assets/pitombeira-dark.png')",
-        "homemd": "url('/assets/pitombeira-dark-md.png')"
+        "home": "url('/')",
+        "homemd": "url('/assets/232.png')"
       }
     },
   },
